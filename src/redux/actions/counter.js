@@ -1,4 +1,4 @@
-// Import counter 
+// Import Types
 import { COUNTER, RESET_COUNTER } from '../types';
 
 // Counter Action defination for Increment/Decrement

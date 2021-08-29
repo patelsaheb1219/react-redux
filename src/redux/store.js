@@ -1,7 +1,6 @@
 // Module Import
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from "redux-thunk";
-import { count } from 'yargs';
 
 // All reducer imports
 import counter from './reducers/counter';
