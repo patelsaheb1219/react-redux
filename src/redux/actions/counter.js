@@ -11,20 +11,25 @@ export const updateCounter = (counterValue, type) => async dispatch => {
         payload
       })
     } else if (type === "decrement") {
-      if (counterValue < 0) {
+      if (counterValue <= 0) {
         alert("Counter value cannot be less than 0");
+        dispatch({
+          type: COUNTER,
+          payload: 0
+        })
+      } else {
+        const payload = counterValue - 1;
+        dispatch({
+          type: COUNTER,
+          payload
+        })
       }
-      const payload = counterValue - 1;
-      dispatch({
-        type: COUNTER,
-        payload
-      })
     } else {
       dispatch({
-        type: RESET_COUNTER,
+        type: COUNTER,
         payload: 0
       })
-      alert("Something went wrong, Counter reset to 0");
+      alert("Something went wrong!, Counter reset to 0");
     }
   } catch (err) {
     console.error(err);
