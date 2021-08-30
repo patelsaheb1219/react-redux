@@ -3,15 +3,16 @@ import { Provider } from "react-redux";
 
 // File Import
 import './App.css';
+import Counter from './components/Counter';
 
 // Store Import
 import store from './redux/store';
 
-function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <div className="App">
-        <h1>Hello World</h1>
+        <Counter />
       </div>
     </Provider>
   );
